@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->float('total',10,2);
             $table->float('paid',10,2);
             $table->float('pending',10,2);
-            $table->enum('status',['active','inactive']);
+            $table->enum('status',['active','inactive'])->default('active');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
             $table->timestamps();

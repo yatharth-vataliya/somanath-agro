@@ -36,7 +36,8 @@
                                 Delete
                             </button>
                         </td>
-                        <td>Orders</td>
+                        <td><a href="{{ route('orders.index',['customer_id' => encrypt($customer->id)]) }}" class="btn btn-info">Orders</a>
+                        </td>
                     </tr>
                 @endforeach
             </table>
@@ -48,20 +49,20 @@
 </div>
 @section('scripts')
     <script>
-            function delete_customer(customer_id) {
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                       Livewire.emit('deleteCustomer',customer_id);
-                    }
-                });
-            }
+        function delete_customer(customer_id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emit('deleteCustomer', customer_id);
+                }
+            });
+        }
     </script>
 @endsection

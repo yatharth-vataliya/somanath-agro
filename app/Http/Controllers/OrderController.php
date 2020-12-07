@@ -22,9 +22,9 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($customer_id)
     {
-        //
+        return view('order.create',compact('customer_id'));
     }
 
     /**

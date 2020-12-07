@@ -19,7 +19,12 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.Swal = require('sweetalert2')
+window.Swal = require('sweetalert2');
+
+import Vue from 'vue'
+import 'livewire-vue'
+
+window.Vue = Vue //this is important! Do not use require('vue')
 
 window.axios = require('axios');
 
