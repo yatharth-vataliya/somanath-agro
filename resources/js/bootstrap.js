@@ -21,10 +21,10 @@ try {
 
 window.Swal = require('sweetalert2');
 
-import Vue from 'vue'
-import 'livewire-vue'
-
-window.Vue = Vue //this is important! Do not use require('vue')
+// import Vue from 'vue'
+// import 'livewire-vue'
+//
+// window.Vue = Vue //this is important! Do not use require('vue')
 
 window.axios = require('axios');
 
