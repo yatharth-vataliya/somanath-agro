@@ -28,7 +28,7 @@ class IndexCustomer extends Component
         $customers = Customer::where('customer_name', 'like', '%'.$this->search_customer.'%')
             ->orWhere('customer_address', 'like', '%'.$this->search_customer.'%')
             ->orWhere('customer_mobile', 'like', '%'.$this->search_customer.'%')
-            ->paginate(7);
+            ->latest()->paginate(7);
         return view('livewire.index-customer',compact('customers'))->extends('layouts.app');
     }
 

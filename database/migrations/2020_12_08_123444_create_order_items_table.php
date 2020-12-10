@@ -23,8 +23,8 @@ class CreateOrderItemsTable extends Migration
             $table->float('product_quantity',10,2);
             $table->float('product_price',10,2);
             $table->float('total',10,2);
-            $table->float('paid',10,2);
-            $table->float('pending',10,2);
+//            $table->float('paid',10,2);
+//            $table->float('pending',10,2);
             $table->enum('status',['active','inactive'])->default('active');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');

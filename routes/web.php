@@ -32,6 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order/index/{customer_id}', App\Http\Livewire\OrderIndex::class)->name('orders.index');
     Route::get('/order/create/{customer_id}', [OrderController::class, 'create'])->name('order.create');
     Route::post('/order/store', [OrderController::class, 'store'])->name('order.store');
+    Route::get('/order/show/{order_id}',[OrderController::class, 'show'])->name('order.show');
 });
 
 
