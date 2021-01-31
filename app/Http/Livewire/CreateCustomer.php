@@ -21,7 +21,7 @@ class CreateCustomer extends Component
         $this->validateOnly($property, [
             'customer_name' => 'required|string|max:151',
             'customer_address' => 'required|string|max:151',
-            'customer_mobile' => 'required|string|min:10|max:10|unique:customers,customer_mobile'
+            // 'customer_mobile' => 'required|string|min:10|max:10|unique:customers,customer_mobile'
         ], [
             'customer_name.required' => 'Please Enter Customer Name',
             'customer_address.required' => 'Please Enter Customer Address',

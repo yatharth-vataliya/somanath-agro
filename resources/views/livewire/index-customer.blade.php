@@ -30,7 +30,7 @@
                         <td>{{ $customer->customer_mobile }}</td>
                         <td>{{ $customer->total_paid }}</td>
                         <td>{{ $customer->total_pending }}</td>
-                        <td>Edit</td>
+                        <td><a href="{{ route('customer.edit', ['customer' => $customer->id]) }}" class="btn btn-warning">Edit</a></td>
                         <td>
                             <button type="button" class="btn btn-danger" onclick="delete_customer({{ $customer->id }})">
                                 Delete

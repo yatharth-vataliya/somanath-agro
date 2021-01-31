@@ -33,6 +33,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order/create/{customer_id}', [OrderController::class, 'create'])->name('order.create');
     Route::post('/order/store', [OrderController::class, 'store'])->name('order.store');
     Route::get('/order/show/{order_id}',[OrderController::class, 'show'])->name('order.show');
+    Route::get('/customer/{customer}/edit', App\Http\Livewire\EditCustomer::class)->name('customer.edit');
+
+
 });
 
 
