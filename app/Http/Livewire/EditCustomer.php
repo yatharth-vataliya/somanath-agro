@@ -25,17 +25,17 @@ class EditCustomer extends Component
     public function updated($property)
     {
 
-        // $this->validateOnly($property, [
-        //     'customer_name' => 'required|string|max:151',
-        //     'customer_address' => 'required|string|max:151',
-        //     // 'customer_mobile' => 'required|string|min:10|max:10|unique:customers,customer_mobile'
-        // ], [
-        //     'customer_name.required' => 'Please Enter Customer Name',
-        //     'customer_address.required' => 'Please Enter Customer Address',
-        //     'customer_mobile.required' => 'Please Enter Customer Mobile',
-        //     'customer_mobile.min' => 'Please Enter Minimum 10 digit Mobile Number',
-        //     'customer_mobile.unique' => 'Customer Mobile is already registered please try with some different :):'
-        // ]);
+        $this->validateOnly($property, [
+            'customer_name' => 'required|string|max:151',
+            'customer_address' => 'required|string|max:151',
+            // 'customer_mobile' => 'required|string|min:10|max:10|unique:customers,customer_mobile'
+        ], [
+            'customer_name.required' => 'Please Enter Customer Name',
+            'customer_address.required' => 'Please Enter Customer Address',
+            'customer_mobile.required' => 'Please Enter Customer Mobile',
+            'customer_mobile.min' => 'Please Enter Minimum 10 digit Mobile Number',
+            'customer_mobile.unique' => 'Customer Mobile is already registered please try with some different :):'
+        ]);
     }
 
     public function updateCustomer()
