@@ -23,14 +23,17 @@
             </div>
         </div>
         <div class="row p-2 rounded">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 Total :- {{ $order->total }}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 Paid :- {{ $order->paid }}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 Pending :- {{ $order->pending }}
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-outline-danger">Get Print Out</button>
             </div>
         </div>
         <div class="row rounded shadow-sm">
