@@ -32,14 +32,14 @@ Add Order
                         <div class="col-md-2">
                             <input type="text" name="company_name[]" id="company_name" class="form-control" placeholder="Company Name">
                         </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-4">
-                            <input type="text" name="product_name[]" id="product_name" class="form-control" placeholder="Product Name">
+                        <div class="col-md-2">
+                            <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="company_name[]" id="company_name" class="form-control" placeholder="Company Name">
+                            <input type="text" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
                         </div>
+                    </div>
+                    <div class="row mt-2">                        
                         <div class="col-md-2">
                             <input type="number" name="product_quantity[]" oninput="document.getElementById('sub_1').value = (document.getElementById('p_1').value * this.value);super_count();" id="q_1" class="form-control" placeholder="Product Quantity">
                         </div>
@@ -87,6 +87,14 @@ Add Order
                             <input type="text" name="company_name[]" class="form-control" Placeholder="Company Name">
                         </div>
                         <div class="col-md-2">
+                            <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                    <div class="col-md-2">
                             <input type="number" name="product_quantity[]"  oninput="document.getElementById('sub_${row_count}').value = (document.getElementById('p_${row_count}').value * this.value);super_count();" id="q_${row_count}" class="form-control" placeholder="Product Quantity" >
                         </div>
                         <div class="col-md-2">
