@@ -40,6 +40,9 @@ class OrderController extends Controller
         $request->validate([
             'customer_id' => 'required',
             'product_name.*' => 'required|string',
+            'company_name.*' => 'required|string',
+            'batch_no.*' => 'required|numeric',
+            'expiry_date.*' => 'required|date',
             'product_quantity.*' => 'required|integer',
             'product_price.*' => 'required|integer',
             'paid' => 'required|integer'
@@ -101,6 +104,9 @@ class OrderController extends Controller
                 'customer_id' => $customer->id,
                 'customer_unique_id' => $customer->customer_unique_id,
                 'product_name' => $request->input('product_name')[$i],
+                'company_name' => $request->input('company_name')[$i],
+                'batch_no' => $request->input('batch_no')[$i],
+                'expiry_date' => $request->input('expiry_date')[$i],
                 'product_quantity' => $request->input('product_quantity')[$i],
                 'product_price' => $request->input('product_price')[$i],
                 'total' => $request->input('product_price')[$i] * $request->input('product_quantity')[$i]

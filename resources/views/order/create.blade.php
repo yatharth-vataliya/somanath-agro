@@ -36,7 +36,7 @@ Add Order
                             <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
+                            <input type="date" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
                         </div>
                     </div>
                     <div class="row mt-2">                        
@@ -90,7 +90,7 @@ Add Order
                             <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
+                            <input type="date" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
                         </div>
                     </div>
                     <div class="row mt-2">
