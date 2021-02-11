@@ -43,6 +43,9 @@
                     <tr>
                         <th>No.</th>
                         <th>Product Name</th>
+                        <th>Product Company</th>
+                        <th>Batch No</th>
+                        <th>Expiry Date</th>
                         <th>Product Quantity</th>
                         <th>Product Price</th>
                         <th>Sub Total</th>
@@ -54,6 +57,9 @@
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $order_item->product_name }}</td>
+                            <td>{{ $order_item->company_name }}</td>
+                            <td>{{ $order_item->batch_no }}</td>
+                            <td>{{ $order_item->expiry_date }}</td>
                             <td>{{ $order_item->product_quantity }}</td>
                             <td>{{ $order_item->product_price }}</td>
                             <td>{{ $order_item->product_quantity * $order_item->product_price }}</td>
