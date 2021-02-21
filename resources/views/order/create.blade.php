@@ -27,26 +27,33 @@ Add Order
                 <div id="add_row">
                     <div class="row">
                         <div class="col-md-4">
-                            <input type="text" name="product_name[]" id="product_name" class="form-control" placeholder="Product Name">
+                            <label for="product_name">product Name</label>
+                            <input type="text" name="product_name[]" id="product_name" class="form-control" placeholder="Product Name" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="company_name[]" id="company_name" class="form-control" placeholder="Company Name">
+                        <label for="company_name">Company Name</label>
+                            <input type="text" name="company_name[]" id="company_name" class="form-control" placeholder="Company Name" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No">
+                        <label for="batch_no">Batch No</label>
+                            <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="date" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
+                        <label for="expiry_date">Expiry date</label>
+                            <input type="date" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date" required="true">
                         </div>
                     </div>
-                    <div class="row mt-2">                        
+                    <div class="row mt-2">
                         <div class="col-md-2">
-                            <input type="number" name="product_quantity[]" oninput="document.getElementById('sub_1').value = (document.getElementById('p_1').value * this.value);super_count();" id="q_1" class="form-control" placeholder="Product Quantity">
+                        <label for="product_quantity">Produt Quantity</label>
+                            <input type="number" name="product_quantity[]" oninput="document.getElementById('sub_1').value = (document.getElementById('p_1').value * this.value);super_count();" id="q_1" class="form-control" placeholder="Product Quantity" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="number" name="product_price[]" oninput="document.getElementById('sub_1').value = (document.getElementById('q_1').value * this.value);super_count();" id="p_1" class="form-control" placeholder="Product Price">
+                        <label for="product_price">Product Price</label>
+                            <input type="number" name="product_price[]" oninput="document.getElementById('sub_1').value = (document.getElementById('q_1').value * this.value);super_count();" id="p_1" class="form-control" placeholder="Product Price" required="true">
                         </div>
                         <div class="col-md-2">
+                        <label for="">Sub Total</label>
                             <input type="number" name="sub_total[]" id="sub_1" class="form-control" Placeholder="Sub Total">
                         </div>
                     </div>
@@ -59,7 +66,8 @@ Add Order
                 </div>
                 <div class="row py-2">
                     <div class="col-md-2">
-                        <input type="number" name="paid" class="form-control" Placeholder="Paid to you">
+                        <label for="paid_to_you">Paid To You</label>
+                        <input type="number" id="paid_to_you" name="paid" class="form-control" Placeholder="Paid to you" required="true">
                     </div>
                     <div class="col-md-2">
                         <input type="submit" class="btn btn-success" value="Submit Order">
@@ -81,26 +89,33 @@ Add Order
                     <div id="row_${row_count}">
                     <div class="row mt-2">
                         <div class="col-md-4">
-                            <input  type="text" name="product_name[]" class="form-control" placeholder="Product Name">
+                            <label>Product Name</label>
+                            <input  type="text" name="product_name[]" class="form-control" placeholder="Product Name" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="company_name[]" class="form-control" Placeholder="Company Name">
+                            <label>Company Name</label>
+                            <input type="text" name="company_name[]" class="form-control" Placeholder="Company Name" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No">
+                            <label>Batch No</label>
+                            <input type="text" name="batch_no[]" id="batch_no" class="form-control" placeholder="Batch No" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="date" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date">
+                            <label>Expiry Date</label>
+                            <input type="date" name="expiry_date[]" id="expiry_date" class="form-control" placeholder="Expiry Date" required="true">
                         </div>
                     </div>
                     <div class="row mt-2">
                     <div class="col-md-2">
-                            <input type="number" name="product_quantity[]"  oninput="document.getElementById('sub_${row_count}').value = (document.getElementById('p_${row_count}').value * this.value);super_count();" id="q_${row_count}" class="form-control" placeholder="Product Quantity" >
+                            <label>Product Quantity</label>
+                            <input type="number" name="product_quantity[]"  oninput="document.getElementById('sub_${row_count}').value = (document.getElementById('p_${row_count}').value * this.value);super_count();" id="q_${row_count}" class="form-control" placeholder="Product Quantity" required="true">
                         </div>
                         <div class="col-md-2">
-                            <input type="number" name="product_price[]" oninput="document.getElementById('sub_${row_count}').value = (document.getElementById('q_${row_count}').value * this.value);super_count();" id="p_${row_count}" class="form-control" placeholder="Product Price">
+                            <label>Product Price</label>
+                            <input type="number" name="product_price[]" oninput="document.getElementById('sub_${row_count}').value = (document.getElementById('q_${row_count}').value * this.value);super_count();" id="p_${row_count}" class="form-control" placeholder="Product Price" required="true">
                         </div>
                         <div class="col-md-2">
+                            <label>Sub Total</label>
                             <input type="number" name="sub_total[]" id="sub_${row_count}" class="form-control" Placeholder="Sub Total">
                         </div>
                     </div>

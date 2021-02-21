@@ -41,7 +41,7 @@ class OrderController extends Controller
             'customer_id' => 'required',
             'product_name.*' => 'required|string',
             'company_name.*' => 'required|string',
-            'batch_no.*' => 'required|numeric',
+            'batch_no.*' => 'required|string',
             'expiry_date.*' => 'required|date',
             'product_quantity.*' => 'required|integer',
             'product_price.*' => 'required|integer',
