@@ -11,7 +11,7 @@ class CreateCustomer extends Component
 {
 
     public $customer_name = '';
-    public $customer_address = 'Mota Panchdevada';
+    public $customer_address = '';
     public $customer_mobile = '';
     private $customer_unique_id;
 
@@ -65,7 +65,7 @@ class CreateCustomer extends Component
 
         $this->customer_unique_id = NUll;
         $this->customer_name = '';
-        $this->customer_address = 'Mota Pachdevada';
+        $this->customer_address = 'Rajkot';
         $this->customer_mobile = '';
 
         session()->flash('info', 'Customer Added Successfully. :):');
